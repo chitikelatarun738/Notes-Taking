@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Notes App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Advanced Notes App</h1>
+
+    <div class="top-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Search notes..." oninput="displayNotes()" />
+      <button class="dark-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+    </div>
+
+    <div class="note-input">
+      <input type="text" id="title" placeholder="Note Title" />
+      <textarea id="content" rows="4" placeholder="Note Content"></textarea>
+      <button onclick="addOrUpdateNote()">Save Note</button>
+      <input type="hidden" id="editingId" />
+    </div>
+
+    <div class="notes" id="notesContainer"></div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
